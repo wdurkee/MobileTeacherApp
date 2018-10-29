@@ -7,50 +7,34 @@ class VideoScreen extends React.Component {
     title: 'Video',
   };
   render() {
-
+    const { params } = this.props.navigation.state;
+    const title = params ? params.title : null;
+    const author = params ? params.author : null;
+    const length = params ? params.length : null;
 
     return (
 
-      <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'white' }}>
+      <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center', backgroundColor: 'white' }}>
         <View style={styles.titleBox} >
-          <Text style={styles.titleText}>Curr Video</Text>
+          <Text style={styles.titleText}>{title}</Text>
           <View style={styles.info}>
-            <Image style={{ height: 15, width: 15 }} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOshcJkmYWYYilyAHPayOP8kZUwpjBpYkv2lHFjywYiYgXDK_j' }} />
+            <Image style={{ height: 15, width: 15, marginRight: 10 }} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOshcJkmYWYYilyAHPayOP8kZUwpjBpYkv2lHFjywYiYgXDK_j' }} />
             <Text>
-              Title
-            </Text>
-            <Text>
-              Length
+              {author}
             </Text>
           </View>
         </View>
-        <Text style={styles.hours}>
-          Data
-        </Text>
-
-        <Image style={{ height: 80, width: 100 }} source={{ uri: 'https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcuAHe_mqxAXeacR3joRmumdPk.nmk_O7m8q7tEDRSKEACnQV6zdX7Kr56ktO82agVfQxdpIq0xYlW7cq8EFdN7Gswj5xPgcKban1SyWQ0kbaFbw80jkrJKIimcPIosqjfB_lSwsidzqzyMb7XiwKCy2E4cOspLg8HbbJL7EqDa9E-&h=1080&w=1920&format=jpg' }} />
 
         <View style={styles.itemStyle}>
-          <Text>Info</Text>
-          <Text>Info</Text>
-          <Text>Info</Text>
+          <Text>Length: {length}</Text>
         </View>
         <View style={styles.itemStyle}>
-          <Text>Info</Text>
+          <Text>Published: October 2018</Text>
         </View>
         <View style={styles.itemStyle}>
-          <Text>Info</Text>
+          <Text>Minimum Data Size: 25MB</Text>
         </View>
 
-        <View style={styles.itemStyle}>
-
-          <Text>Info</Text>
-          <Text>Info</Text>
-          <Text>Info</Text>
-        </View>
-        <View style={styles.itemStyle}>
-          <Text>Info</Text>
-        </View>
         <TouchableOpacity style={styles.bottomButton} >
           <Text style={styles.bottomButtonText}>
             Download
@@ -75,20 +59,22 @@ const styles = {
   },
   itemStyle: {
     width: '100%',
-    height: '10%',
+    height: '17%',
     borderBottomWidth: 1,
     borderColor: '#dcdee2',
     borderRadius: 0,
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center'
+
   },
   titleBox: {
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
-    width: '80%',
-    height: '10%',
+    width: '90%',
+    height: '30%',
     borderWidth: 1,
     borderRadius: 0,
     borderColor: 'black',
@@ -100,7 +86,7 @@ const styles = {
     elevation: 1
   },
   info: {
-    paddingTop: 10,
+    marginTop: 30,
     justifyContent: 'center',
     flexDirection: 'row',
     position: 'relative',
@@ -130,7 +116,7 @@ const styles = {
   },
   bottomButton: {
     width: '100%',
-    height: 100,
+    height: 70,
     backgroundColor: '#c2ceb5',
     alignItems: 'center',
     justifyContent: 'center'

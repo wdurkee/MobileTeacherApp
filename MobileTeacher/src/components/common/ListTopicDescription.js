@@ -3,12 +3,11 @@ import { Text, View, Image } from 'react-native';
 
 // Make a component
 
-const ListDescription = (props) => {
+const ListTopicDescription = (props) => {
   return (
     <View style={styles.containerStyle}>
       <View style={styles.textViewStyle}>
         <Text style={styles.nameText}>{props.title}</Text>
-        <Text style={styles.strainText}>{props.author}</Text>
         <Text style={styles.priceText}>{props.length}</Text>
       </View>
       <Image style={styles.arrowStyle} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKtowj3LvusoWpxfergvkHIacyfVGu1OtzMGoqWpcIqPyDyVpIA' }} />
@@ -40,11 +39,10 @@ const styles = {
     width: '35%'
   },
   nameText: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: 'bold',
-    paddingTop: 5,
     paddingLeft: 20,
-    paddingBottom: 3
+    paddingTop: 10
   },
   strainText: {
     color: 'gray',
@@ -59,9 +57,10 @@ const styles = {
   },
   priceText: {
     fontSize: 12,
-    paddingLeft: 20
+    paddingLeft: 20,
+    marginTop: 10
   }
 };
 
 // Make the component available to other parts of the app
-export { ListDescription };
+export { ListTopicDescription };

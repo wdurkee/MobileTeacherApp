@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity } from 'react-native';
 import ListSelect from '../components/ListSelect';
-import { ListItem, List, ListDescription, ListSection, ListImage } from '../components/common';
+import { ListItem, ListTopicItem, ListTopicDescription, List, ListDescription, ListSection, ListImage } from '../components/common';
 
 
 class CategoriesScreen extends React.Component {
@@ -9,27 +9,23 @@ class CategoriesScreen extends React.Component {
     headerRight: null,
     title: 'Select Topic'
   };
-    /*constructor(props) {
-        super(props);
-        this.state = { total: 0.00 };
-    }*/
+
 
   render() {
+
 
     return (
 
       <View style={{ flex: 1 }}>
         <List>
           <ListSection headerText='English'>
-            <ListItem onPress={() => this.props.navigation.navigate('Topic')} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Topic', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Topic', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
+            <ListTopicItem
+              title={'Beginning English'}
+              length={'4 Videos'}
+              onPress={() => this.props.navigation.navigate('Topic', { section: 'English', topic: 'Beginning English'})}
+             />
           </ListSection>
-          <ListSection headerText='Mathematics'>
-            <ListItem onPress={() => this.props.navigation.navigate('Topic', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Topic', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Topic', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-          </ListSection>
+
         </List>
     </View>
 

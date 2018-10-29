@@ -21,11 +21,12 @@ const styles = {
     position: 'relative'
   },
   headerText: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     paddingLeft: 10,
     paddingBottom: 8,
     paddingTop: 20,
+    color: '#1b421e'
   }
 };
 

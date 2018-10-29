@@ -17,14 +17,13 @@ class SplashScreen extends React.Component {
             <Text style={styles.textStyle}>
             Welcome to Mobile Teacher
             </Text>
-            <Text style={styles.textStyleSmall}>
-            Please make sure you have the youtube go app already downloaded
-            </Text>
             <View style={{ height: '30%', width: '30%', justifyContent: 'center', alignItems: 'center' }}>
               <Image style={styles.manImageStyle} source={require('../images/Logo.png')} />
             </View>
-            <Button onPress={() => this.props.navigation.navigate('Categories')} title="Next" />
-
+            <Text style={styles.textStyleSmall}>
+            Please make sure you have the youtube go app already downloaded
+            </Text>
+            <Button style={styles.buttonStyle} onPress={() => this.props.navigation.navigate('Categories')} title="Continue!" />
 
           </View>
 
@@ -57,10 +56,10 @@ const styles = {
   },
   textStyle: {
     fontStyle: 'italic',
-    paddingTop: 150,
-    fontSize: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 100,
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
     color: '#aee2c9',
     backgroundColor: 'rgba(0,0,0,0)'
   },
@@ -68,18 +67,18 @@ const styles = {
     resizeMode: 'contain',
     height: 350,
     width: 175,
-    marginTop: 40,
+    marginTop: 75,
 
   },
   textStyleSmall: {
     fontStyle: 'italic',
-    paddingTop: 150,
+    paddingTop: 75,
     paddingLeft: 20,
-    fontSize: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontSize: 18,
+    textAlign: 'center',
     color: '#aee2c9',
-    backgroundColor: 'rgba(0,0,0,0)'
+    backgroundColor: 'rgba(0,0,0,0)',
+    width: '80%'
   },
   arrows: {
     fontSize: 40,
@@ -87,6 +86,11 @@ const styles = {
     marginTop: 25,
     color: '#008445',
     backgroundColor: 'rgba(0,0,0,0)'
+  },
+  buttonStyle: {
+    marginTop: 50,
+    fontSize: 24,
+    color: '#96ce9c',
   }
 };
 

@@ -1,16 +1,17 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { ListDescription } from './ListDescription';
+import { ListTopicDescription } from './ListTopicDescription';
 import { ListImage } from './ListImage';
 
-const ListItem = (props) => {
+
+const ListTopicItem = (props) => {
   const title = props ? props.title : null;
   const author = props ? props.author: null;
   const length = props ? props.length : null;
   return (
 
     <TouchableOpacity onPress={props.onPress} style={styles.containerStyle}>
-      <ListDescription title={title} author={author} length={length} />
+      <ListTopicDescription title={title} author={author} length={length} />
     </TouchableOpacity>
   );
 };
@@ -34,4 +35,4 @@ const styles = {
   }
 };
 
-export { ListItem };
+export { ListTopicItem };

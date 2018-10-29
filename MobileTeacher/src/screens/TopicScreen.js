@@ -7,23 +7,43 @@ import { ListItem, List, ListDescription, ListSection, ListImage } from '../comp
 class TopicScreen extends React.Component {
   static navigationOptions = {
     headerRight: null,
-    title: 'Geometry'
+    title: 'English'
   };
-    /*constructor(props) {
-        super(props);
-        this.state = { total: 0.00 };
-    }*/
+
 
   render() {
+    
+
 
     return (
 
       <View style={{ flex: 1 }}>
         <List>
-          <ListSection headerText='Geometry Videos'>
-            <ListItem onPress={() => this.props.navigation.navigate('Video')} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Video', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
-            <ListItem onPress={() => this.props.navigation.navigate('Video', { rating: ' 4.9 ', title: 'MedMen', deliveryTime: '|  15 - 20 mins ', product: 'Gelato' })} image='https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2013/08/20204949/dispensary-faqs.jpg' />
+          <ListSection headerText='Beginning English'>
+            <ListItem
+              title={'Mobile Teacher: People Playing Cards for teaching English'}
+              author={'mobileteacher'}
+              length={'2:49'}
+              onPress={() => this.props.navigation.navigate('Video', { author: 'mobileteacher', title: 'Mobile Teacher: People Playing Cards for teaching English', length: '2:49'})}
+             />
+            <ListItem
+              title={'Mobile Teacher: Action Pictures for teaching English'}
+              author={'mobileteacher'}
+              length={'2:12'}
+              onPress={() => this.props.navigation.navigate('Video', { author: 'mobileteacher', title: 'Mobile Teacher: Action Pictures for teaching English', length: '2:12'})}
+            />
+            <ListItem
+              title={'Mobile Teacher: Balloon Toss for teaching English'}
+              author={'mobileteacher'}
+              length={'2:46'}
+              onPress={() => this.props.navigation.navigate('Video', { author: 'mobileteacher', title: 'Mobile Teacher: Balloon Toss for teaching English', lenght: '2:46'})}
+            />
+            <ListItem
+              title={'Mobile Teacher: Alphabet Squares for teaching English'}
+              author={'mobileteacher'}
+              length={'2:56'}
+              onPress={() => this.props.navigation.navigate('Video', { author: 'mobileteacher', title: 'Mobile Teacher: Alphabet Squares for teaching English', lenght: '2:56'})}
+            />
           </ListSection>
         </List>
     </View>
